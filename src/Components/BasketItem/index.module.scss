@@ -1,0 +1,203 @@
+@import "../../Styles/varibels.module";
+
+.main {
+  display: flex;
+  padding: 50px 0 50px 0;
+  @media only screen and (min-width: 0px) and (max-width: 1030px) {
+    & {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: $mobile) {
+    & {
+      align-items: unset;
+    }
+  }
+
+  &__settings {
+    display: flex;
+    align-items: center;
+    @media only screen and (min-width: 0px) and (max-width: 1030px) {
+      & {
+        margin-top: 15px;
+        justify-content: space-between;
+      }
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      height: 49px;
+      padding-left: 44px;
+
+      @media only screen and (min-width: 0px) and (max-width: 1030px) {
+        & {
+          border: none;
+        }
+        &:not(:first-child) {
+          border-left: 1px dashed rgba(63, 78, 101, 0.3);
+        }
+      }
+      @media only screen and (min-width: 0px) and (max-width: 570px) {
+        & {
+          padding-left: 0;
+          border: none !important;
+        }
+        &:not(:first-child) {
+          padding-left: 11px;
+        }
+        &:not(:last-child) {
+          padding-right: 11px !important;
+
+        }
+      }
+    }
+
+    & > div:not(:last-child) {
+      padding-right: 44px;
+    }
+  }
+}
+
+.logo {
+  max-height: 191px;
+  max-width: 281px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+  @media only screen and (min-width: 0px) and (max-width: 1030px) {
+    & {
+      height: 197px;
+      margin: 0;
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: $mobile) {
+    & {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  & > img {
+    height: 100%;
+    @media only screen and (min-width: 0px) and (max-width: 1030px) {
+      & {
+        width: 100%;
+      }
+    }
+    @media only screen and (min-width: 0px) and (max-width: $mobile) {
+      & {
+        width: unset;
+      }
+    }
+  }
+}
+
+.information {
+  box-sizing: border-box;
+  max-width: 400px;
+  padding-right: 140px;
+  @media only screen and (min-width: 0px) and (max-width: 1030px) {
+    & {
+      padding: 0;
+    }
+  }
+}
+
+.title {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #111111;
+  margin: 10px 0 10px 0;
+  word-break: break-word;
+  @media only screen and (min-width: 0px) and (max-width: 1030px) {
+    & {
+      font-family: 'Inter', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #111111;
+    }
+  }
+}
+
+.description {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3F4E65;
+  word-break: break-word;
+}
+
+.calculateBTNS {
+  display: flex;
+
+  & > button {
+    border: none;
+    padding: 4px 13px 4px 13px;
+    background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+    border-radius: 1000px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  & > p {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #3F4E65;
+    padding: 0 21px 0 21px;
+  }
+
+}
+
+.price {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+  color: #111111;
+  @media only screen and (min-width: 0px) and (max-width: $mobile) {
+    & {
+      font-size: 16px;
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: 570px) {
+     div & {
+      border-left: 1px dashed rgba(63, 78, 101, 0.3) !important;
+      border-right: 1px dashed rgba(63, 78, 101, 0.3) !important;
+    }
+  }
+}
+
+.deleteBTN {
+  display: flex;
+  align-items: center;
+
+  & > button {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: #FFC85E;
+    border-radius: 79px;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

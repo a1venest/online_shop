@@ -1,0 +1,181 @@
+@import "../../../Styles/varibels.module";
+
+.main {
+  min-height: 107px;
+  display: flex;
+  align-items: center;
+  @media only screen and (min-width: 0px) and (max-width: $largeWidth) {
+    & {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    @media only screen and (min-width: 0px) and (max-width: $mediumWidth) {
+      & {
+        flex-direction: column;
+        & > div {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  background: #FFC85E;
+  border-radius: 79px;
+  box-sizing: border-box;
+  max-height: 59px;
+
+  & > a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    max-height: 15px;
+    padding: 21px 44px 21px 44px;
+  }
+
+  & > a > img {
+    margin-left: 12px;
+  }
+}
+
+.border {
+  height: 49px;
+  width: 1px;
+  border-right: 1px dashed #dadde1;
+  margin: 0 25px 0 25px;
+}
+
+.operator {
+  display: flex;
+
+
+  &__number {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: #111111;
+  }
+
+  &__workTime {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 150%;
+    color: #3F4E65;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 10px;
+
+    & > a {
+      font-family: 'Inter', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 150%;
+      text-decoration-line: underline;
+      color: #3F4E65;
+    }
+  }
+
+  &__logo {
+    position: relative;
+
+    & > img {
+      border-radius: 50%;
+    }
+
+    &_online {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #1FD85D;
+      border: 2px solid #F0F6FA;
+      border-radius: 50%;
+      top: 28px;
+      right: 0;
+    }
+  }
+}
+
+.basket {
+  position: relative;
+  width: 40px;
+  &__main{
+    display: flex;
+    align-items: center;
+    @media only screen and (min-width: 0px) and (max-width: $mediumWidth) {
+      & {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer
+  }
+
+  &__text {
+    margin-left: 28px;
+  }
+
+  &__ellipse {
+    top: -11px;
+    right: -11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #FFC85E;
+    border: 3px solid #FFFFFF;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+  }
+
+  &__title {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 150%;
+    color: #3F4E65;
+  }
+
+  &__price {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    color: #111111;
+  }
+}
+
+.logo {
+  margin-right: 38px;
+}
+
+.input {
+  margin-left: 15px;
+  margin-right: 35px;
+}

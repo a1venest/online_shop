@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    color: #3F4E65;
+    & > p {
+        height: 15px;
+    }
+    & > img {
+      margin-right: 8px;
+    }
+}

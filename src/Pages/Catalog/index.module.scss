@@ -1,0 +1,210 @@
+@import "../../Styles/varibels.module";
+
+.catalogGroup {
+  display: grid;
+  grid-template-columns: 238px 1fr;
+  grid-column-gap: 108px;
+  @media only screen and (min-width: 0px) and (max-width: $tablet) {
+    & {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 21px;
+  grid-row-gap: 21px;
+  &__description{
+    margin-bottom: 50px;
+  }
+  @media only screen and (min-width: 1050px) and (max-width: 1407px) {
+    & {
+      grid-template-columns: 1fr 1fr;
+      & > div {
+        justify-self: center;
+      }
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: 1050px) {
+    & {
+      grid-template-columns: 1fr;
+      & > div {
+        justify-self: center;
+      }
+    }
+  }
+}
+
+.typeCards {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    background: #FFFFFF;
+    box-shadow: 0 15px 70px -11px rgba(43, 28, 1, 0.04);
+    border-radius: 10px;
+    text-align: center;
+    padding: 18px 19px 18px 19px;
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3F4E65;
+    margin-bottom: 10px;
+    &:hover{
+      cursor: pointer;
+    }
+    &_selected{
+      background: lightgrey;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 11px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 25px;
+  @media only screen and (min-width: 0px) and (max-width: $tablet) {
+    & {
+      justify-content: center;
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: $mobile) {
+    & {
+      margin: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 238px;
+  opacity: 0.3;
+  border-bottom: 1px dashed #3F4E65;
+}
+
+.filterPanel {
+  @media only screen and (min-width: $mobile) and (max-width: $tablet) {
+    & {
+      width: 320px;
+      justify-self: center;
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: $mobile) {
+    & {
+      width: 100%;
+      justify-self: center;
+    }
+  }
+  &__itemTypeCare{
+    @media only screen and (min-width: 0px) and (max-width: $mobile) {
+      & {
+       display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__priceTitle {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    color: #3F4E65;
+    margin-top: 10px;
+    margin-bottom: 16px;
+
+    & > b {
+      font-family: 'Inter', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      color: #111111;
+    }
+  }
+
+  &__title {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #111111;
+  }
+
+  &__submit {
+    padding: 21px 51px 21px 51px;
+    font-family: 'Inter', serif;
+    background: #FFC85E;
+    border-radius: 79px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    border: none;
+  }
+
+  &__reset {
+    margin-left: 10px;
+    border: none;
+    background: #FFC85E;
+    border-radius: 79px;
+    padding: 21px;
+  }
+
+  &__btns {
+    display: flex;
+    margin-top: 20px;
+  }
+}
+
+.itemTypeCare__title {
+  margin: 20px 0 20px 0;
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #111111;
+  @media only screen and (min-width: 0px) and (max-width: $mobile) {
+    & {
+      margin: 5px 0 5px 0;
+      font-family: 'Inter',serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #3F4E65;
+      text-transform: none ;
+    }
+  }
+
+  &_selected{
+    color:red;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+
